@@ -55,8 +55,8 @@ Please use the same format as [ActivityNet Challenge](http://activity-net.org/in
 }
 ```
 
-## LISENCE
-NTT Lisence
+## LICENSE
+NTT License
 
-According to the lisence, it is not allowed to create pull requests.
+According to the license, it is not allowed to create pull requests.
 Please feel free to send issues.
