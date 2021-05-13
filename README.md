@@ -1,6 +1,12 @@
 # SODA
-This repository is the imprimentation of "SODA: Story Oriented Dense Video Captioning Evaluation Flamework" published at ECCV 2020.
+This repository is the imprimentation of "SODA: Story Oriented Dense Video Captioning Evaluation Flamework" published at ECCV 2020 [pdf](https://fujiso.github.io/publications/ECCV2020_soda.pdf).
 SODA measures the performance of video story description systems.
+
+## Update
+v1.1 (2021/5)
+* Added new option "--multi_reference" to deal with multiple reference.  
+  SODA selects the reference that has the maximum f1 for each video, and returns macro averaged scores.  
+* Fixed BertScore import
 
 ## Requirements
 python 3.6+ (developed with 3.7)
@@ -16,9 +22,14 @@ Both files should be the json format for ActivityNet Captions.
 python soda.py -s path/to/submission.json -r path/to/ground_truth.json 
 ```
 
+You can run on the multiple reference setting, with `--multi_reference` option.
+```bash
+python soda.py --multi_reference -s path/to/submission.json -r path/to/ground_truth1.json path/to/ground_truth2.json
+```
+
 You can try other sentence evaluation metrics, e.g. CIDEr and BERTScore, with `-m` option.
 ```bash
-python soda.py -s path/to/submission.json -m CIDEr
+python soda.py -s path/to/submission.json -m BERTScore
 ```
 
 ## Sample input file
